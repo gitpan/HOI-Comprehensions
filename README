@@ -32,6 +32,7 @@ NAME
 HOI::Comprehensions - Higher-Order Imperative "Re"features in Perl: List Comprehensions
 
 SYNOPSIS
+  use HOI::Comprehensions qw( comp );
 
   my $list = comp( sub { $x + $y + $z }, x => [ 1, 2, 3 ], y => [ 4, 5, 6 ], z => sub { ( 1, 1 ) } )->( sub { $x > 1 } );
 
@@ -64,6 +65,10 @@ or name => subroutine. Comp returns a function which takes all guards in form of
 A hashref which holds generator variables as its keys and value of those variables as
 its values is passed to the formula subroutine. However, it is recommended to use such
 variables directly instead of dereference the hashref.
+
+Generators can be arrayrefs or subroutines. A subroutine generator should return a
+pair ( elt, done ), where elt is the next element and done is a flag telling whether
+the iteration is over.
 
 METHODS
 
