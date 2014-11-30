@@ -3,7 +3,7 @@ package HOI::Comprehensions;
 require Exporter;
 our @ISA = qw( Exporter );
 our @EXPORT_OK = qw( comp get_member get_list is_over );
-our $VERSION = '0.01';
+our $VERSION = '0.011';
 
 use Alias qw(attr);
 
@@ -146,8 +146,8 @@ generators of an infinite list. It works as if evaluating multi-level loops lazi
 Currently, the generators are handled in sequence of the argument list offered by the user.
 As a result of such implementation, a list
     { (x, y) | x is natural number, y belongs to { 0, 1 }, x is odd }
-may be evaluated incorrectly. To avoid such situation, make sure infinite generators 
-are subsequent to all the finite ones.
+may be evaluated incorrectly. To avoid such situation, make sure finite generators 
+are subsequent to all the infinite ones.
 
 =head1 FUNCTIONS
 

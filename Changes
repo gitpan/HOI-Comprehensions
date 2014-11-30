@@ -4,3 +4,5 @@ Revision history for Perl extension HOI::Comprehensions.
 	- original version; created by h2xs 1.23 with options
 		-XAn HOI::Comprehensions
 
+0.011 Sun Nov 30 2014
+    - Fixed readme.
