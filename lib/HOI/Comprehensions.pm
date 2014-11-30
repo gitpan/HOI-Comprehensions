@@ -3,7 +3,7 @@ package HOI::Comprehensions;
 require Exporter;
 our @ISA = qw( Exporter );
 our @EXPORT_OK = qw( comp get_member get_list is_over );
-our $VERSION = '0.012';
+our $VERSION = '0.02';
 
 use Alias qw(attr);
 
